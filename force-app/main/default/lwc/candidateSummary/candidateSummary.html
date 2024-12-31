@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Candidate Summary" icon-name="custom:custom63">
+      <template if:true={candidates.data}>
+        <lightning-datatable
+          key-field="Id"
+          data={candidates.data}
+          columns={columns}
+          hide-checkbox-column
+        >
+        </lightning-datatable>
+      </template>
+      <template if:true={candidates.error}>
+        <p class="slds-text-color_error">{candidates.error}</p>
+      </template>
+    </lightning-card>
+  </template>  
